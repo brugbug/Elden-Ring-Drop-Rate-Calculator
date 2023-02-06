@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Elden Ring Drop Rate Calculator</title>
+    <link rel="stylesheet" href="./style.css">
+    <script type="text/javascript" src="calculateDropRate.js"></script>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <main>
+        <div class="column">
+            <h1>Elden Ring Drop Rate Calculator</h1><br>
+            <h2>Item Discovery</h2>
+            <p>Item Discovery is a stat in Elden Ring that determines the likelihood of acquiring items dropped form
+                defeated enemies.</p>
+            <p>Each individual item has its own unique "base" chance to drop (calculated at 100 Discovery).</p>
+            <p>This chance can be bolstered via certain stats and equipment</p><br>
+
+            <h2>Drop Rate Formula</h2>
+            <p>The formula for calculating the drop rate is like so: </p>
+            <p>x = Floor([Base Drop Rate] * 10 * ([Discovery Stat] / 100))</p>
+            <p>Drop Rate = (x * 100) / (1000 + (x - ([Base Drop Rate] * 10)))</p><br>
+
+            <h2>More Information</h2>
+            <p>More detailed information on item discovery can be found on the Elden Ring FextraLife website
+                (https://eldenring.wiki.fextralife.com/Discovery)</p>
+            <p>You can also find an item's base-drop rate on its respective page on the wiki (ex.
+                https://eldenring.wiki.fextralife.com/Iron%20Greatsword)</p><br>
+
+            <h2>Drop Rate Calculator</h2>
+            <form id="calculateForm" onsubmit="calculateRate(event)">
+                <!-- WIP -->
+                <!--<label for="itemName">Item Name: </label>
+                <input type="text" id="itemName" name="itemName"><br><br> -->
+                <label for="basePercent">Base Drop Rate: </label>
+                <input type="text" id="basePercent" name="basePercent" placeholder="ex. 4"><br><br>
+                <label for="discoveryStat">Discovery Stat: </label>
+                <input type="text" id="discoveryStat" name="discoveryStat" placeholder="ex. 100"><br><br>
+                <input type="submit" value="Submit"><br><br>
+            </form>
+
+            <label for="resultRate">Result: </label>
+            <input type="text" id="resultRate" placeholder="Not Calculated" readonly>
+        </div>
+
+        <!-- <div class="column">
+            <img src="https://cdn.donmai.us/original/b4/20/b420dd896498e2d1dc749b8f2edd8db4.jpg" id="gigaChadRadahn">
+            <p>^ People who use this tool</p>
+            <iframe src="https://eldenring.puredmg.com/dropcalc/">
+        </div> -->
+    </main>
+</body>
+
+</html>

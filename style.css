@@ -1,0 +1,30 @@
+body {
+    background: linear-gradient( rgba(10,27,21,1) 15%, rgba(24,68,67,1) 65%, rgba(113,135,116,1) 100%);
+    background-size: 100%, 100%;
+    background-repeat: no-repeat;
+    overflow: scroll;
+    
+    margin-left: 50px;
+    margin-bottom: 1000px;
+    height: 100%;
+}
+
+h1, h2, p, label {
+    color: #ffe19b;
+}
+
+iframe {
+    width: 80%;
+    height: 500px;
+}
+
+.column {
+    float: left;
+    width: 50%;
+}
+
+#gigaChadRadahn {
+    margin-top: 30px;
+    width: 30%;
+    height: 30%;
+}
